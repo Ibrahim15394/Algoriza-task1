@@ -59,7 +59,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               child: TextButton(
                   onPressed: ()
                   {
-                    navigateTo(context, const LoginScreen());
+                    navigateAndFinish(context, LoginScreen());
                   },
                   child: const Text(
                     'Skip',
@@ -148,7 +148,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               MyButton(
                 onClick: ()
                 {
-                  navigateTo(context, const LoginScreen());
+                  navigateAndFinish(context, LoginScreen());
                 },
                 background:const Color(0xFF4DB6AC),
                 height: 50.0,
@@ -161,17 +161,22 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:
-                 [
+                  [
                   const Text(
                     'Dont have an account?',
                   ),
-                  MyTextButton(
-                      onClick: ()
-                      {
-                        navigateTo(context, const LoginScreen());
-                      },
-                      text: 'Sign Up',
-                  ),
+                   TextButton(
+                       onPressed: ()
+                       {
+                         navigateAndFinish(context,  LoginScreen());
+                       },
+                     child: Text(
+                     'Sign Up',
+                     style: TextStyle(
+                       color: Colors.teal[300],
+                     ),
+                   ),
+                   ),
                 ],
               ),
             ],

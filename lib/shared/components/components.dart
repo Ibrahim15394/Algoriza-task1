@@ -27,7 +27,7 @@ class MyButton extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         color: background,
-        borderRadius: BorderRadius.circular(radius!),
+        borderRadius: BorderRadius.circular(0.0),
       ),
       child: MaterialButton(
         onPressed: onClick,
@@ -44,23 +44,45 @@ class MyButton extends StatelessWidget {
   }
 }
 
-class MyTextButton extends StatelessWidget {
-  final VoidCallback onClick;
-  final String text;
-  const MyTextButton({
+class DefaultFormField extends StatelessWidget {
+  final TextInputType type;
+  final String validate;
+  final String textLabel;
+  final TextEditingController controller;
+  final GestureTapCallback onTap;
+  final IconData? prefix;
+
+  const DefaultFormField({
     Key? key,
-    required this.onClick,
-    required this.text,
+    required this.controller,
+    required this.type,
+    required this.validate,
+    required this.textLabel,
+    required this.onTap,
+     this.prefix,
+
   })
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-        onPressed: onClick,
-        child:Text(
-          text,
-        ),
+    return TextFormField(
+      onTap: onTap,
+      controller: controller,
+      keyboardType: type,
+      validator: (value)
+      {
+        if(value!.isEmpty)
+          {
+           return validate;
+          }
+        return null;
+      },
+      decoration: InputDecoration(
+        labelText: textLabel,
+        prefixIcon: Icon(prefix),
+        border: const OutlineInputBorder(),
+      ),
     );
   }
 }
@@ -71,3 +93,8 @@ void navigateTo(context, widget) =>  Navigator.push(
     builder: (context) =>  widget,
   ),
 );
+
+void navigateAndFinish(context, widget) =>
+    Navigator.pushAndRemoveUntil(
+        context, MaterialPageRoute(builder: (context) => widget),
+            (route) => false);
