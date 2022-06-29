@@ -197,10 +197,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               TextButton(
                                 onPressed: ()
                                 {
-                                  navigateTo(context, const RegisterScreen(),);
+                                  navigateTo(context, RegisterScreen(),);
                                 },
                                 child: const Text('Register here'),
-                              )
+                              ),
                             ],
                           ),
                           const SizedBox(

@@ -51,6 +51,7 @@ class DefaultFormField extends StatelessWidget {
   final TextEditingController controller;
   final GestureTapCallback onTap;
   final IconData? prefix;
+  final IconData? suffix;
 
   const DefaultFormField({
     Key? key,
@@ -60,7 +61,7 @@ class DefaultFormField extends StatelessWidget {
     required this.textLabel,
     required this.onTap,
      this.prefix,
-
+    this.suffix,
   })
       : super(key: key);
 
@@ -81,6 +82,7 @@ class DefaultFormField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: textLabel,
         prefixIcon: Icon(prefix),
+        suffixIcon: Icon(suffix),
         border: const OutlineInputBorder(),
       ),
     );

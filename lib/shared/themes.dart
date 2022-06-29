@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 ThemeData lightTheme = ThemeData(
   appBarTheme: const AppBarTheme(
+    titleSpacing: 0.0,
     backgroundColor: Colors.white,
     elevation: 0.0,
     systemOverlayStyle: SystemUiOverlayStyle(
