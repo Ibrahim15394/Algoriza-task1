@@ -3,6 +3,10 @@ import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+//للاسف معرفتيش استخدم media query
+// استخدمت  country picker لكن معرفتيش اظهرها في TextFormField
+// معرفتيش ان الصورة تاخد  statusBar
+
 class BoardingModel
 {
   String? image;
