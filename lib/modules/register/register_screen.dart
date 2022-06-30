@@ -11,10 +11,9 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+
   var emailController = TextEditingController();
-
   var phoneController = TextEditingController();
-
   var passwordController = TextEditingController();
 
   var formKey = GlobalKey<FormState>();
@@ -181,9 +180,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       text: 'Register',
                       onClick: ()
                       {
-                        if(formKey.currentState!.validate())
+                        if(formKey.currentState!.validate() )
                         {
-                          emailController.text;
+                          print('gig');
+                           emailController.text;
                            phoneController.text;
                            passwordController.text;
                         }

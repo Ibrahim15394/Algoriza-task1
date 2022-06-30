@@ -7,7 +7,7 @@ class MyButton extends StatelessWidget {
   final Color? background;
   final bool? isUpperCase;
   final double? radius;
-  final VoidCallback onClick;
+  final VoidCallback? onClick;
 
   const MyButton({Key? key,
     required this.text,
