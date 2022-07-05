@@ -1,4 +1,4 @@
-import 'package:algoriza_task1/features/register/register_screen.dart';
+import 'package:algoriza_task1/features/register/presentation/pages/register_screen.dart';
 import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
