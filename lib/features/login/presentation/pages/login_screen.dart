@@ -1,6 +1,5 @@
-import 'package:algoriza_task1/modules/register/register_screen.dart';
+import 'package:algoriza_task1/features/register/register_screen.dart';
 import 'package:algoriza_task1/shared/components/components.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -92,16 +91,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           DefaultFormField(
                             onTap: () {
-                              showCountryPicker(
-                                context: context,
-                                onSelect: (Country country) {
-                                  print('Select country: ${country.displayName}');
-                                },
-                                exclude: ['Eg', 'Sn'],
-                                favorite: ['Eg'],
-                                showPhoneCode: true,
-                                searchAutofocus: true,
-                              );
                             },
                             controller: phoneController,
                             type: TextInputType.phone,
@@ -197,7 +186,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               TextButton(
                                 onPressed: ()
                                 {
-                                  navigateTo(context, RegisterScreen(),);
+                                  navigateTo(context, const RegisterScreen(),);
                                 },
                                 child: const Text('Register here'),
                               ),

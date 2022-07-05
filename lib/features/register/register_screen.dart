@@ -1,6 +1,5 @@
-import 'package:algoriza_task1/modules/login/login_screen.dart';
+import 'package:algoriza_task1/features/login/presentation/pages/login_screen.dart';
 import 'package:algoriza_task1/shared/components/components.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -134,16 +133,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     DefaultFormField(
                       onTap: () {
-                        showCountryPicker(
-                          context: context,
-                          onSelect: (Country country) {
-                            print('Select country: ${country.displayName}');
-                          },
-                          exclude: ['Eg', 'Sn'],
-                          favorite: ['Eg'],
-                          showPhoneCode: true,
-                          searchAutofocus: true,
-                        );
                       },
                       controller: phoneController,
                       type: TextInputType.phone,
@@ -180,7 +169,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       text: 'Register',
                       onClick: ()
                       {
-                        if(formKey.currentState!.validate() )
+                        if(formKey.currentState!.validate())
                         {
                           print('gig');
                            emailController.text;

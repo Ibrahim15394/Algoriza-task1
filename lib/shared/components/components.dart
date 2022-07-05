@@ -49,7 +49,7 @@ class DefaultFormField extends StatelessWidget {
   final String validate;
   final String textLabel;
   final TextEditingController controller;
-  final GestureTapCallback onTap;
+  final GestureTapCallback? onTap;
   final IconData? prefix;
   final IconData? suffix;
 
@@ -59,7 +59,7 @@ class DefaultFormField extends StatelessWidget {
     required this.type,
     required this.validate,
     required this.textLabel,
-    required this.onTap,
+     this.onTap,
      this.prefix,
     this.suffix,
   })
