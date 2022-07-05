@@ -5,7 +5,7 @@ import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../model/onboarding/onboarding.dart';
+import '../../../../model/onboarding/onboarding.dart';
 
 
 class OnBoardingScreen extends StatefulWidget {
