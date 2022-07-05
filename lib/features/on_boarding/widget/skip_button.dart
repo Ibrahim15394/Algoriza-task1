@@ -1,3 +1,5 @@
+import 'package:algoriza_task1/features/login/presentation/pages/login_screen.dart';
+import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class SkipButton extends StatelessWidget {
@@ -15,7 +17,10 @@ class SkipButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: TextButton(
-          onPressed: () {},
+          onPressed: ()
+          {
+            navigateAndFinish(context, const LoginScreen());
+          },
           child: const Text(
             'Skip',
             style: TextStyle(
