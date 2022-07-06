@@ -1,5 +1,5 @@
+import 'package:algoriza_task1/core/util/widgets/navigate.dart';
 import 'package:algoriza_task1/features/login/presentation/pages/login_screen.dart';
-import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class SkipButton extends StatelessWidget {

@@ -1,8 +1,10 @@
+import 'package:algoriza_task1/core/util/widgets/default_form_field.dart';
 import 'package:algoriza_task1/core/util/widgets/my_asset_image.dart';
-import 'package:algoriza_task1/features/login/presentation/widgets/boarder_google_widget.dart';
-import 'package:algoriza_task1/features/login/presentation/widgets/my_divider_widget.dart';
+import 'package:algoriza_task1/core/util/widgets/my_button.dart';
+import 'package:algoriza_task1/core/util/widgets/navigate.dart';
+import 'package:algoriza_task1/core/util/widgets/boarder_google_widget.dart';
+import 'package:algoriza_task1/core/util/widgets/my_divider_login_register.dart';
 import 'package:algoriza_task1/features/register/presentation/pages/register_screen.dart';
-import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +25,9 @@ class LoginWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const MyAssetImage(
+             MyAssetImage(
                 image: 'login',
+                height: 200.0,
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -86,6 +89,7 @@ class LoginWidget extends StatelessWidget {
                       height: 10.0,
                     ),
                     DefaultFormField(
+                      isPassword: true,
                       controller: phoneController,
                       type: TextInputType.phone,
                       validate: 'Phone number is not registered',
@@ -137,7 +141,7 @@ class LoginWidget extends StatelessWidget {
                           onPressed: () {
                             navigateTo(
                               context,
-                              const RegisterScreen(),
+                               RegisterScreen(),
                             );
                           },
                           child: const Text('Register here'),

@@ -1,8 +1,9 @@
+import 'package:algoriza_task1/core/util/widgets/my_button.dart';
+import 'package:algoriza_task1/core/util/widgets/navigate.dart';
 import 'package:algoriza_task1/features/login/presentation/pages/login_screen.dart';
 import 'package:algoriza_task1/features/on_boarding/presntation/widget/logo.dart';
 import 'package:algoriza_task1/features/on_boarding/presntation/widget/skip_button.dart';
 import 'package:algoriza_task1/model/onboarding/onboarding.dart';
-import 'package:algoriza_task1/shared/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
