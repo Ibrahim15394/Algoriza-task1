@@ -47,43 +47,43 @@ class MyButton extends StatelessWidget {
 class DefaultFormField extends StatelessWidget {
   final TextInputType type;
   final String validate;
-  final String textLabel;
+  final String? textLabel;
   final TextEditingController controller;
-  final GestureTapCallback? onTap;
-  final IconData? prefix;
+  final Widget? prefixIcon;
   final IconData? suffix;
+  final String? hintText;
+  final double? radius;
 
-  const DefaultFormField({
+   DefaultFormField({
     Key? key,
     required this.controller,
     required this.type,
     required this.validate,
-    required this.textLabel,
-     this.onTap,
-     this.prefix,
+     this.textLabel,
+     this.prefixIcon,
     this.suffix,
+    this.hintText,
+    this.radius,
   })
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      onTap: onTap,
+    return  TextFormField(
       controller: controller,
-      keyboardType: type,
-      validator: (value)
-      {
-        if(value!.isEmpty)
-          {
-           return validate;
-          }
+      validator: (value) {
+        if (value!.isEmpty) {
+          return validate;
+        }
         return null;
       },
+      keyboardType: type,
       decoration: InputDecoration(
-        labelText: textLabel,
-        prefixIcon: Icon(prefix),
-        suffixIcon: Icon(suffix),
-        border: const OutlineInputBorder(),
+        prefixIcon: prefixIcon,
+        hintText: hintText,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(radius!),
+        ),
       ),
     );
   }

@@ -114,7 +114,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 10.0,
                   ),
                   DefaultFormField(
-                    onTap: (){},
+
                     controller: emailController,
                     type: TextInputType.emailAddress,
                     validate: 'must be enter your email address',
@@ -135,8 +135,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 10.0,
                   ),
                   DefaultFormField(
-                    onTap: () {
-                    },
                     controller: phoneController,
                     type: TextInputType.phone,
                     validate: 'Phone number is not registered',
@@ -157,8 +155,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     height: 10.0,
                   ),
                   DefaultFormField(
-                    onTap: () {
-                    },
                     controller: passwordController,
                     type: TextInputType.visiblePassword,
                     validate: 'must be enter password',
