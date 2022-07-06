@@ -187,7 +187,7 @@ class RegisterWidget extends StatelessWidget {
                   const SizedBox(
                     height: 15.0,
                   ),
-                  const MyDividerWidget(),
+                  const MyDividerLoginAndRegister(),
                   const SizedBox(
                     height: 15.0,
                   ),

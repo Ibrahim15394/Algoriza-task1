@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyDividerWidget extends StatelessWidget {
-  const MyDividerWidget({Key? key}) : super(key: key);
+class MyDividerLoginAndRegister extends StatelessWidget {
+  const MyDividerLoginAndRegister({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

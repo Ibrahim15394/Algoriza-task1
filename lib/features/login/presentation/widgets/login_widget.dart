@@ -120,7 +120,7 @@ class LoginWidget extends StatelessWidget {
                     const SizedBox(
                       height: 30.0,
                     ),
-                    const MyDividerWidget(),
+                    const MyDividerLoginAndRegister(),
                     const SizedBox(
                       height: 30.0,
                     ),
@@ -171,27 +171,3 @@ class LoginWidget extends StatelessWidget {
 }
 
 
-// TextFormField(
-//   controller: phoneController,
-//   validator: (value) {
-//     if (value!.isEmpty) {
-//       return 'Phone number is not registered';
-//     }
-//     return null;
-//   },
-//   keyboardType: TextInputType.phone,
-//   decoration: InputDecoration(
-//     prefixIcon: CountryCodePicker(
-//       onChanged: (CountryCode countryCode) {},
-//       initialSelection: 'EG',
-//       favorite: const ['+20', 'EG'],
-//       showCountryOnly: false,
-//       showOnlyCountryWhenClosed: false,
-//       alignLeft: false,
-//     ),
-//     hintText: '1099988681',
-//     border: OutlineInputBorder(
-//       borderRadius: BorderRadius.circular(6),
-//     ),
-//   ),
-// ),
